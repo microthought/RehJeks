@@ -113,7 +113,7 @@ angular.module('rehjeks.solve', [])
     .then((testString) => $scope.highlightedText = $sce.trustAsHtml(testString));
     $scope.success = false;
     $scope.failure = false;
-    $scope.attempt = '//gi';
+    $scope.attempt = '';
     challStartTime = new Date();
 
   };
@@ -127,8 +127,8 @@ angular.module('rehjeks.solve', [])
   if (Server.currentChallenge.data !== undefined) {
     $scope.challengeData = Server.currentChallenge.data;
     $scope.highlightedText = $sce.trustAsHtml(Server.currentChallenge.data.text);
-    $scope.attempt = '//gi';
-    $scope.attempt = "//gi";
+    $scope.attempt = '';
+    $scope.attempt = '';
   } else {
     $scope.getRandom();
   }
